@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title%}Links Query {% endblock %}
+
+{% block content %}
+
+<!-- <p>{{linklist}}</p> -->
+<section>
+        <h1>Plagiarism Result : {{result}}%</h1>
+  <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td><h1>Plagiarised Blocks Found in links</h1></td>
+            <s></s>
+          </tr>
+
+          {% for link in links %}
+            {% for l in link %}
+              <tr>
+
+            <td align="center"><a href="http://{{l}}">{{l}}</a></td>
+           <!--  <td align="center"><a href="http://{{l.1}}">{{l.1}}</a></td> -->
+
+            <!-- <td align="center"><a href="http://{{l}}">{{l}}</a></td> -->
+          </tr>
+
+            {% endfor %}
+          {% endfor %}
+
+
+
+
+
+        </tbody>
+      </table>
+
+  </div>
+
+    </section>
+    <div class="made-with-love">
+
+    <h4>  Made with <i>♥</i> by <a target="_blank" href="">Syed</a></h4>
+
+
+
+
+</div>
+
+
+{% endblock content %}
